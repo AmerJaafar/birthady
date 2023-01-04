@@ -63,8 +63,19 @@ i {
     text-align: center;
     padding: 15px;
     border-radius: 50px;
-}
+    transition: .3s ease;
 
+.btn:hover {
+     box-shadow: 5px 5px 10px 0px black;
+     transform: scale(1.1);
+     transition: .3s ease;
+}
+i {
+    transition: .3s ease;
+}
+i:hover {
+    transform: scale(1.1);
+}
 /* header styles */
 
   
@@ -85,6 +96,12 @@ i {
     cursor: pointer;
     margin: 0 auto;
     z-index: 1;
+    transition: .3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    transition: .3s ease;
 }
 
 .header .icon span {
