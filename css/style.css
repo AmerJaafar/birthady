@@ -20,14 +20,6 @@
       transform: translateX(0);
     }
   }
-  
-  .animated-element {
-
-    animation-delay: 1s;
-    
-    transform:  translateX(-100%);
-    
-  }
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -175,17 +167,20 @@ i:hover {
 /* main section style */
 .main {
     background: url(../images/front-view-kid-wearing-party-hat_23-2149477945.jpeg) no-repeat;
-    min-height:100vh ;
+    height: 650px;;
     display: flex;
     align-items: flex-end;
     background-size: cover;
 }
 
 .content-container {
- 
+    animation: slideIn 1.5s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    transform: translateX(-100%);
     margin-bottom: 50px;
     width: 55%;
-    height: 44%;
+    height: 50%;
     border-radius: 0 50px 50px 0;
     text-align: center;
     z-index: 1;
