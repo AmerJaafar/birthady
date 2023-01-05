@@ -11,6 +11,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+/* animation  */
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .animated-element {
+
+    animation-delay: 1s;
+    
+    transform:  translateX(-100%);
+    
+  }
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -88,6 +106,7 @@ i:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 9;
 }
 .header .icon {
     width: 100%;
@@ -96,7 +115,7 @@ i:hover {
     
     cursor: pointer;
     margin: 0 auto;
-    z-index: 1;
+    
     transition: .3s ease;
 }
 
@@ -156,19 +175,20 @@ i:hover {
 /* main section style */
 .main {
     background: url(../images/front-view-kid-wearing-party-hat_23-2149477945.jpeg) no-repeat;
-    height: 750px;
+    min-height:100vh ;
     display: flex;
     align-items: flex-end;
     background-size: cover;
 }
 
 .content-container {
-
+ 
     margin-bottom: 50px;
     width: 55%;
     height: 44%;
     border-radius: 0 50px 50px 0;
     text-align: center;
+    z-index: 1;
 }
 .content {
     margin: 10% 25%;
@@ -187,6 +207,8 @@ i:hover {
 .hidden {
     display: none; 
   }
+
+
 /* main section style end */
 
 
@@ -401,6 +423,7 @@ i:hover {
     width: 50%;
     margin: 50px 25px;
     border-radius: 0 50px 50px 0;
+
 }
 .form .from-content {
     display: flex;

@@ -52,3 +52,26 @@ toggleButton.addEventListener('click', () => {
 
 
 
+const elements = document.querySelectorAll('.animated-element');
+
+function startAnimation(element) {
+  element.style.animation = 'slideIn 1.5s ease-in-out';
+  element.style.animationFillMode = 'forwards';
+  element.style.animationDelay = "0.5s";
+}
+
+function resetAnimation(element) {
+  element.style.animation = '';
+  element.style.transform = 'translateX(-100%)';
+}
+
+document.addEventListener('scroll', () => {
+  elements.forEach(element => {
+    const bounds = element.getBoundingClientRect();
+    if (bounds.top < window.innerHeight && bounds.bottom > 0) {
+      startAnimation(element);
+    } else {
+      resetAnimation(element);
+    }
+  });
+});
