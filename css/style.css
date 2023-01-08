@@ -54,7 +54,7 @@ body {
     margin-bottom: 50px;
     font-family: 'Lobster', cursive;
     font-weight: 400;
-
+    transition: .3s ease-in;
 }
 
 .opacity {
